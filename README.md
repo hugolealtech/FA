@@ -39,12 +39,6 @@ Charts: Chart.js para visualização de ranking familiar e categorias.
 
 Icons: FontAwesome 6 + Google Fonts (Inter & Share Tech Mono).
 
-⚡ Como rodar
-Clone este repositório.
-
-Abra o arquivo index.html em qualquer navegador moderno.
-
-Opcional: Se quiser rodar como um servidor pessoal, aponte seu Raspberry Pi para o diretório e acesse via rede local.
 
 📜 Licença e Filosofia
 Projeto desenvolvido para uso pessoal, focado na produtividade de quem precisa de rapidez para voltar logo aos livros de Direito.
