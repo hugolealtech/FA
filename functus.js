@@ -341,13 +341,18 @@ const App = {
     renderDashboard(el) {
         const activeCards = Store.data.cards.filter(c => c.status === 'active' && !Utils.isExpired(c.expiration));
         
+        // VERSÃO 2.0: Acionamento da Vigilância Inteligente
         const duplicates = this.checkDuplicates();
         let dupWarning = '';
+        
         if(duplicates.length > 0) {
             dupWarning = `
-            <div class="glass-panel" style="background: rgba(255, 165, 0, 0.15); border-color: orange; cursor:pointer" onclick="app.showDuplicateResolver()">
+            <div class="glass-panel" style="background: rgba(255, 165, 0, 0.15); border-color: orange; cursor:pointer; margin-bottom: 20px;" onclick="app.showDuplicateResolver()">
                 <div style="display:flex; justify-content:space-between; align-items:center; color: var(--text-main)">
-                    <div><i class="fa-solid fa-clone" style="color:orange"></i> <strong>Atenção:</strong> ${duplicates.length} grupos de suspeitas de duplicidade.</div>
+                    <div>
+                        <i class="fa-solid fa-clone" style="color:orange"></i> 
+                        <strong>Atenção:</strong> ${duplicates.length} grupos de duplicidade real detectados.
+                    </div>
                     <button class="btn btn-sm btn-ghost">Resolver <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
             </div>`;
